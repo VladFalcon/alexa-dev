@@ -12,8 +12,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-zinc-950/30 to-zinc-950"></div>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#000_100%)]"></div>
             </div>
-
-            {/* ТУТ: Зменшили space-y-9 на space-y-6 та прибрали mt-20, щоб весь блок піднявся вище */}
+        
             <div className="max-w-5xl mx-auto px-4 relative z-10 text-center space-y-6 md:space-y-8 mt-10">
                 
                 <motion.h1 
@@ -22,9 +21,9 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="hero-text text-6xl md:text-9xl font-black tracking-tighter text-white uppercase font-condensed leading-none"
                 >
-                    Oleksandra <br />
+                   {t.hero.name} <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-red-600 to-amber-500">
-                        Iliukhina
+                        {t.hero.secondName}
                     </span>
                 </motion.h1>
                 
@@ -42,7 +41,7 @@ export default function Hero() {
                     ))}
                 </motion.p>
                 
-                {/* ТУТ: Зменшили відступ зверху до pt-2 (було pt-6) */}
+                
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -57,7 +56,7 @@ export default function Hero() {
                             <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-1"></div>
                         </div>
                         <span className="text-white font-condensed tracking-widest uppercase font-bold text-sm group-hover:text-amber-500 transition-colors">
-                            Watch Action Reel
+                            {t.hero.btnVideo}   
                         </span>
                     </button>
                 </motion.div>

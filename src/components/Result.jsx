@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Results() {
+    const { t } = useLanguage();
+
     // Варіанти анімації для контейнера карток (робить каскадну появу)
     const containerVariants = {
         hidden: { opacity: 0 },
-        visible: {
+        visible: {      
             opacity: 1,
             transition: {
                 staggerChildren: 0.2 // Затримка 0.2с між появою кожної наступної картки
@@ -33,7 +36,7 @@ export default function Results() {
                     className="text-center mb-20 space-y-4"
                 >
                     <h2 className="text-4xl md:text-5xl font-condensed font-black uppercase tracking-widest text-white">
-                        Results & Status
+                        {t.results.title}
                     </h2>
                     <div className="h-1.5 w-24 bg-gradient-to-r from-red-700 to-amber-500 mx-auto"></div>
                 </motion.div>
@@ -48,28 +51,28 @@ export default function Results() {
                 >
                     <motion.div variants={cardVariants} className="status-box">
                         <h3 className="text-2xl font-black font-condensed text-amber-500 mb-3 uppercase tracking-wide">
-                            Benelli Team
+                            {t.results.benelli.title}
                         </h3>
                         <p className="text-zinc-400 text-base leading-relaxed">
-                            Official factory shooter representing Benelli globally in international circuits.
+                            {t.results.benelli.description}
                         </p>
                     </motion.div>
                     
                     <motion.div variants={cardVariants} className="status-box">
                         <h3 className="text-2xl font-black font-condensed text-white mb-3 uppercase tracking-wide">
-                            Vice-World Champion
+                            {t.results.viceWorldChampion.title}
                         </h3>
                         <p className="text-zinc-400 text-base leading-relaxed">
-                            Silver medalist at the prestigious IPSC World Shoot 2023 in Thailand.
+                            {t.results.viceWorldChampion.description}
                         </p>
                     </motion.div>
                     
                     <motion.div variants={cardVariants} className="status-box">
                         <h3 className="text-2xl font-black font-condensed text-white mb-3 uppercase tracking-wide">
-                            European Champion
+                            {t.results.europeanChampion.title}
                         </h3>
                         <p className="text-zinc-400 text-base leading-relaxed">
-                            Gold medalist and title holder at the IPSC European Championship.
+                            {t.results.europeanChampion.description}
                         </p>
                     </motion.div>
                 </motion.div>
@@ -84,31 +87,34 @@ export default function Results() {
                 >
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold font-condensed text-white uppercase tracking-wider border-b border-zinc-800 pb-3">
-                            Key Victories & Podiums
+                            {t.results.keyVictories.title}
                         </h3>
                         <ul className="space-y-4 text-zinc-300 font-condensed tracking-wide text-lg">
                             <li className="flex justify-between border-b border-zinc-900 pb-2">
-                                <span>Benelli German National Shotgun</span> <span className="text-amber-500 font-bold">🥇 Gold</span>
+                                <span>{t.results.keyVictories.firstVictory}</span>
                             </li>
                             <li className="flex justify-between border-b border-zinc-900 pb-2">
-                                <span>Ukrainian National Championship (2023, 2024, 2025)</span> <span className="text-amber-500 font-bold">🥇 Gold</span>
+                                <span>{t.results.keyVictories.secondVictory}</span>
                             </li>
                             <li className="flex justify-between border-b border-zinc-900 pb-2">
-                                <span>IPSC World Shoot (Standard Lady)</span> <span className="text-zinc-400 font-bold">🥈 Silver</span>
+                                <span>{t.results.keyVictories.thirdVictory}</span>
                             </li>
                         </ul>
                     </div>
                     
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold font-condensed text-white uppercase tracking-wider border-b border-zinc-800 pb-3">
-                            Upcoming Competition Schedule
+                            {t.results.competitionSchedule.title}
                         </h3>
                         <ul className="space-y-4 text-zinc-300 font-condensed tracking-wide text-lg">
                             <li className="flex justify-between border-b border-zinc-900 pb-2">
-                                <span>IPSC Level III International Match</span> <span className="text-red-500 font-bold">Schedule 2026</span>
+                                <span>{t.results.competitionSchedule.firstSchedule}</span>
                             </li>
                             <li className="flex justify-between border-b border-zinc-900 pb-2">
-                                <span>European Handgun Championship</span> <span className="text-red-500 font-bold">Schedule 2026</span>
+                                <span>{t.results.competitionSchedule.secondSchedule}</span>
+                            </li>
+                            <li className="flex justify-between border-b border-zinc-900 pb-2">
+                                <span>{t.results.competitionSchedule.thirdSchedule}</span>
                             </li>
                         </ul>
                     </div>

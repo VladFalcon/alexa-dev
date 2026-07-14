@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 import { useRef, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 // Ультра-оптимізований лічильник на Framer Motion
 function Counter({ target, suffix }) {
@@ -24,6 +25,7 @@ function Counter({ target, suffix }) {
 }
 
 export default function Partners() {
+    const { t } = useLanguage();
     return (
         <section id="partners" className="py-28 bg-zinc-900 relative">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#000_100%)] opacity-40 z-0"></div>
@@ -38,7 +40,7 @@ export default function Partners() {
                     className="text-center mb-20 space-y-4"
                 >
                     <h2 className="text-4xl md:text-5xl font-condensed font-black uppercase tracking-widest text-white">
-                        Partnerships
+                        {t.partners.title}
                     </h2>
                     <div className="h-1.5 w-24 bg-red-600 mx-auto"></div>
                 </motion.div>
@@ -51,9 +53,9 @@ export default function Partners() {
                     transition={{ duration: 1 }}
                     className="flex flex-wrap justify-center items-center gap-16 mb-24 tracking-widest font-condensed text-3xl font-black text-zinc-400"
                 >
-                    <span className="hover:text-white transition duration-300 cursor-default">BENELLI</span>
-                    <span className="hover:text-white transition duration-300 cursor-default">OFFICIAL BRAND</span>
-                    <span className="hover:text-white transition duration-300 cursor-default">TACTICAL LAB</span>
+                    <span className="hover:text-white transition duration-300 cursor-default">{t.partners.firstSubtitle}</span>
+                    <span className="hover:text-white transition duration-300 cursor-default">{t.partners.secondSubtitle}</span>
+                    <span className="hover:text-white transition duration-300 cursor-default">{t.partners.thirdSubtitle}</span>
                 </motion.div>
 
                 {/* Головний блок контенту */}
@@ -67,13 +69,13 @@ export default function Partners() {
                         className="space-y-6"
                     >
                         <h3 className="text-2xl font-black font-condensed text-white uppercase tracking-wider">
-                            What a Partner Gets
+                            {t.partners.whatPartnerGets}
                         </h3>
                         <ul className="space-y-4 text-zinc-300 text-lg">
-                            <li className="flex items-start gap-4"><span className="text-red-500 text-xl font-bold">✔</span> <span>International brand representation at global Tier-1 shooting events.</span></li>
-                            <li className="flex items-start gap-4"><span className="text-red-500 text-xl font-bold">✔</span> <span>Targeted, high-performance tactical social media presence.</span></li>
-                            <li className="flex items-start gap-4"><span className="text-red-500 text-xl font-bold">✔</span> <span>Premium content creation (action video, product field testing).</span></li>
-                            <li className="flex items-start gap-4"><span className="text-red-500 text-xl font-bold">✔</span> <span>Direct commercial access to an ultra-focused shooting & tactical market.</span></li>
+                            <li className="flex items-start gap-4"><span className="text-red-500 text-xl font-bold">✔</span> <span>{t.partners.benefits[0]}</span></li>
+                            <li className="flex items-start gap-4"><span className="text-red-500 text-xl font-bold">✔</span> <span>{t.partners.benefits[1]}</span></li>
+                            <li className="flex items-start gap-4"><span className="text-red-500 text-xl font-bold">✔</span> <span>{t.partners.benefits[2]}</span></li>
+                            <li className="flex items-start gap-4"><span className="text-red-500 text-xl font-bold">✔</span> <span>{t.partners.benefits[3]}</span></li>
                         </ul>
                     </motion.div>
                     
@@ -86,21 +88,21 @@ export default function Partners() {
                         className="bg-zinc-950 p-10 border border-zinc-800 relative overflow-hidden status-box"
                     >
                         <h3 className="text-2xl font-black font-condensed text-amber-500 mb-8 uppercase tracking-wider">
-                            Audience Statistics
+                            {t.partners.audienceStatistics.title}
                         </h3>
                         <div className="space-y-6">
                             <div>
-                                <p className="stat-label">Instagram Monthly Reach</p>
+                                <p className="stat-label">{t.partners.audienceStatistics.instagramMonthlyReach}</p>
                                 <p className="stat-value flex items-baseline">
                                     <span className="font-condensed text-white text-5xl font-black">
                                         <Counter target={100} suffix="K+" />
                                     </span>
-                                    <span className="text-base text-zinc-500 font-normal ml-3">/ users</span>
+                                    <span className="text-base text-zinc-500 font-normal ml-3">{t.partners.audienceStatistics.users}</span>
                                 </p>
                             </div>
                             <div>
-                                <p className="stat-label text-zinc-500 uppercase text-sm font-bold">Core Demographics</p>
-                                <p className="text-lg font-bold text-white uppercase tracking-wide font-condensed">Shooting, Tactical Systems</p>
+                                <p className="stat-label text-zinc-500 uppercase text-sm font-bold">{t.partners.audienceStatistics.coreDemographic}</p>
+                                <p className="text-lg font-bold text-white uppercase tracking-wide font-condensed">{t.partners.audienceStatistics.description}</p>
                             </div>
                         </div>
                     </motion.div>
@@ -115,10 +117,10 @@ export default function Partners() {
                     className="mt-20 flex flex-col sm:flex-row justify-center gap-5"
                 >
                     <button onClick={() => window.dispatchEvent(new CustomEvent('open-contact'))} className="btn-base btn-primary hover-target uppercase font-condensed font-black tracking-widest">
-                        Become a Partner
+                        {t.partners.btnBecomePartner}
                     </button>
                     <a href="/media-kit.pdf" download="Alexa_Iliukhina_Media_Kit.pdf" className="btn-base btn-outline hover-target uppercase font-condensed font-black tracking-widest">
-                        Download Media Kit
+                        {t.partners.btnDownloadMediaKit}
                     </a>
                 </motion.div>
             </div>
