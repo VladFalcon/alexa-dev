@@ -20,7 +20,7 @@ export const translations = {
       title: "Results & Status",
       benelli: {
         title: "Benelli Team",
-        description: "Official factory shooter representing Benelli globally in international circuits.",
+        description: "Official factory shooter representing Benelli globally in international circuits."
       },
       viceWorldChampion: {
         title: "Vice-World Champion",
@@ -58,7 +58,7 @@ export const translations = {
       audienceStatistics: {
         title: "Audience Statistics",
         instagramMonthlyReach: "Instagram Monthly Reach",
-        users:  "/ users",
+        users:  " / users",
         reach: "100K+",
         coreDemographic: "Core Demographic",
         description: "Shooting, Tactical Systems"
@@ -76,7 +76,7 @@ export const translations = {
       philosophy: "Філософія"
     },
     hero: {
-      subtitle: "Чемпіонка Європи ● Віце-чемпіонка Світу ● №1 у світовому рейтингу",
+      subtitle: "Чемпіонка Європи ● Віцечемпіонка світу ● №1 у світовому рейтингу",
       name: "ОЛЕКСАНДРА",
       secondName: "ІЛЮХІНА",
       btnPartner: "Стати Партнером",
@@ -88,27 +88,27 @@ export const translations = {
       title: "Результати та Статус",
       benelli: {
         title: "Команда Benelli",
-        description: "Офіційний фабричний стрілець, який представляє Benelli глобально в міжнародних змаганнях."
+        description: "Офіційний стрілець заводської команди, який представляє бренд Benelli на міжнародній арені."
       },
       viceWorldChampion: {
-        title: "Віце-чемпіонка Світу",
-        description: "Срібна призерка на престижному IPSC World Shoot 2023 в Таїланді."
+        title: "Віцечемпіонка світу",
+        description: "Срібна призерка престижного чемпіонату світу IPSC World Shoot 2023 у Таїланді."
       },
       europeanChampion: {
         title: "Чемпіонка Європи",
-        description: "Золота призерка та володарка титулу на IPSC European Championship."
+        description: "Золота призерка та володарка поточного титулу IPSC European Championship."
       },
       keyVictories: {
         title: "Ключові Перемоги та Подіуми",
-        firstVictory: "Benelli Німецький Національний Чемпіонат зі Стрільби - 🥇 Золото",
-        secondVictory: "Ukrainian National Championship (2023, 2024, 2025) - 🥇 Золото",
+        firstVictory: "Національний чемпіонат Німеччини з рушниці (Benelli) - 🥇 Золото",
+        secondVictory: "Національний чемпіонат України (2023, 2024, 2025) - 🥇 Золото",
         thirdVictory: "IPSC World Shoot (Standard Lady) - 🥈 Срібло"
       },
       competitionSchedule: {
         title: "Майбутні Змагання",
         firstSchedule: "IPSC World Shoot 2024 - Малайзія",
         secondSchedule: "IPSC European Championship 2025 - Італія",
-        thirdSchedule: "BenFelli International Cup 2025 - Німеччина"
+        thirdSchedule: "Benelli International Cup 2025 - Німеччина"
       }
     },
     partners: {
@@ -118,15 +118,15 @@ export const translations = {
       thirdSubtitle: "TACTICAL LAB",
       whatPartnerGets: "Що отримує Партнер",
       benefits: [
-        "Міжнародне представлення бренду на глобальних турнірах 1-го рівня.",
-        "Цільова, високопродуктивна тактична присутність у соціальних мережах.",
-        "Преміум створення контенту (екшн-відео, тестування продуктів на полі.",
-        "Прямий комерційний доступ до надзвичайно сфокусованого ринку стрільби та тактики."
+        "Міжнародне представлення бренду на світових змаганнях найвищого рівня.",
+        "Цільова та високоохопна присутність у тактичному сегменті соцмереж.",
+        "Створення преміум-контенту (екшн-відео, польове тестування екіпірування).",
+        "Прямий комерційний доступ до вузькоспеціалізованого стрілецького та тактичного ринку."
       ],
       audienceStatistics: {
         title: "Статистика Аудиторії",
-        instagramMonthlyReach: "Місячний Охоплення Instagram",
-        users:  "/ користувачів",
+        instagramMonthlyReach: "Місячне охоплення в Instagram",
+        users:  " / користувачів",
         reach: "100K+",
         coreDemographic: "Основна Демографія",
         description: "Стрільба, Тактичні Системи"
@@ -134,6 +134,5 @@ export const translations = {
       btnBecomePartner: "Стати Партнером",
       btnDownloadMediaKit: "Завантажити Media Kit"
     }
-
   }
 };
