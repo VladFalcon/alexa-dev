@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+/* --- ТУТ ВСТАВЛЯЄМО ВЕСЬ НАШ CSS, ЯКИЙ БУВ У style.css --- */
+html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    background-color: #09090b; 
+    color: #e4e4e7; 
+    scroll-padding-top: 100px; /* ДОДАЄМО ЦЕ: відступ для плаваючої шапки */
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- BRAND CONDENSED TYPOGRAPHY --- */
+.font-condensed {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.logo {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* --- HEADER TELEMETRY SMOOTH TRANSITIONS --- */
+#main-header {
+    will-change: padding, background-color, border-color;
+}
+
+/* --- HERO GRAPHIC RECONFIGURATIONS --- */
+.hero-bg-fix {
+    background: linear-gradient(180deg, #000000 0%, #09090b 70%, #150202 100%);
+    position: relative;
+}
+
+.hero-text {
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.95);
+}
+
+/* --- PREMIUM MILITARY/TACTICAL BUTTON HOVER EFFECTS --- */
+.btn-base {
+    display: inline-block;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 1.1rem 2.8rem;
+    border-radius: 0; /* Premium flat structural edges */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #b91c1c, #d97706); /* red-700 to amber-600 */
+    color: #ffffff;
+    box-shadow: 0 8px 25px -5px rgba(185, 28, 28, 0.4);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 12px 35px -5px rgba(217, 119, 6, 0.6);
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #09090b;
+}
+
+.btn-secondary:hover {
+    background-color: #d97706; /* amber-600 */
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #3f3f46; /* zinc-700 */
+}
+
+.btn-outline:hover {
+    border-color: #d97706;
+    color: #d97706;
+    transform: translateY(-2px);
+}
+
+/* --- TROPHY & PARTNERSHIP STRUCTURAL BOXES --- */
+.status-box {
+    border: 1px solid #18181b; /* zinc-900 background matrix matcher */
+    background-color: #0f0f11;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 0;
+}
+
+.status-box:hover {
+    border-color: #b91c1c; /* Sharp red accent indicator */
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(185, 28, 28, 0.25);
+}
+
+/* --- SYSTEM STATS DESIGN MATRIX --- */
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #52525b; /* zinc-600 */
+    font-weight: 700;
+}
+
+.stat-value {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+/* --- SWIPER CAROUSEL FRAME SYSTEM SPECIFICS --- */
+.swiper-slide {
+    height: auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.swiper-slide > * {
+    width: 100%;
+}
+
+.media-slide {
+    aspect-ratio: 16 / 10;
+    background-color: #0f0f11;
+    border: 1px solid #18181b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3f3f46; /* zinc-700 */
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.media-slide:hover {
+    border-color: #d97706; /* amber-600 */
+    color: #a1a1aa; /* zinc-400 */
+}
+
+.swiper-pagination-bullet {
+    background-color: #27272a; /* zinc-800 */
+    opacity: 1;
+    border-radius: 0; /* Boxy uniform aesthetic matching tactical theme */
+    width: 8px; height: 8px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #d97706;
+    width: 28px;
+    transition: width 0.3s ease;
+}
+
+/* --- INTERSECTION SCROLL REVEAL CONFIG --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+
+/* --- PC OPERATIONAL SYSTEM CURSOR ACCENTS --- */
+@media (pointer: fine) {
+    body, a, button, .hover-target { cursor: none; }
+
+    .custom-cursor {
+        width: 6px; height: 6px;
+        background-color: #dc2626; /* Tactical red pinpoint laser sight look */
+        border-radius: 50%;
+        position: fixed; pointer-events: none; z-index: 10000;
+        transform: translate(-50%, -50%);
+        transition: transform 0.08s ease-out;
+    }
+    
+    .custom-cursor-follower {
+        width: 34px; height: 34px;
+        border: 1px solid rgba(220, 38, 38, 0.4);
+        border-radius: 50%;
+        position: fixed; pointer-events: none; z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    body.hovering .custom-cursor { transform: translate(-50%, -50%) scale(0); }
+    body.hovering .custom-cursor-follower {
+        width: 50px; height: 50px;
+        background-color: rgba(217, 119, 6, 0.06); /* amber shadow drop inside sight */
+        border-color: #d97706;
+    }
+}
