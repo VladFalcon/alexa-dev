@@ -65,7 +65,31 @@ export const translations = {
       },
       btnBecomePartner: "Become a Partner",
       btnDownloadMediaKit: "Download Media Kit"
-    }
+    },
+    training: {
+      title: "Train with the Vice-World Champion",
+      description: "Premium specialized firearms coaching for highly motivated competitors. Athlete onboarding is strictly capped to focus heavily on custom performance metrics.",
+      btnApply: "Apply for Training Slot",
+      services: [
+        { 
+          title: "Individual Coaching", 
+          desc: "Elite personalized track configurations built for your dynamic classification goals." 
+        },
+        { 
+          title: "Advanced Training Camps", 
+          desc: "Intensive performance immersion workshops tracking match mechanics under extreme strain." 
+        },
+        { 
+          title: "Match Preparation", 
+          desc: "Deconstruct match logistics, psych-conditioning, and mechanical management protocols." 
+        },
+        { 
+          title: "Biomechanical Online Analysis", 
+          desc: "Remote advanced video frame analysis break down of balance, transitions, and speed metrics." 
+        }
+      ]
+    },
+    
   },
   ua: {
     nav: {
@@ -133,6 +157,29 @@ export const translations = {
       },
       btnBecomePartner: "Стати Партнером",
       btnDownloadMediaKit: "Завантажити Media Kit"
-    }
+    },
+    training: {
+      title: "Тренуйтеся з віцечемпіонкою світу",
+      description: "Преміальний спеціалізований коучинг зі стрільби для високомотивованих спортсменів. Кількість місць суворо обмежена, щоб забезпечити максимальний фокус на індивідуальних показниках ефективності.",
+      btnApply: "Подати заявку на тренування",
+      services: [
+        { 
+          title: "Індивідуальний коучинг", 
+          desc: "Елітні персоналізовані програми тренувань, розроблені для швидкого досягнення ваших цілей у класифікації." 
+        },
+        { 
+          title: "Просунуті тренувальні кемпи", 
+          desc: "Інтенсивні збори з повним зануренням для відпрацювання механіки змагань в умовах екстремальних навантажень." 
+        },
+        { 
+          title: "Підготовка до матчів", 
+          desc: "Детальний розбір логістики змагань, психологічної підготовки та протоколів поводження зі зброєю." 
+        },
+        { 
+          title: "Біомеханічний онлайн-аналіз", 
+          desc: "Дистанційний покадровий відеоаналіз: розбір балансу, перенесення вогню та швидкісних метрик." 
+        }
+      ]
+    },
   }
 };
